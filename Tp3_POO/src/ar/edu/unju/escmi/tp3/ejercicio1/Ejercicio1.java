@@ -10,7 +10,7 @@ public class Ejercicio1 {
         Scanner sc = new Scanner(System.in);
         int opc = 0;
         ArrayList<Persona> listaPersonas = new ArrayList<>();
-        
+
         do {
             System.out.println("\n=====================================");
             System.out.println("------MENÚ de OPCIONES-------");
@@ -21,29 +21,29 @@ public class Ejercicio1 {
             System.out.println("5-- Salir");
             System.out.print("Ingresá una opción: ");
             opc = sc.nextInt();
-            sc.nextLine(); 
-            
+            sc.nextLine();
+
             switch (opc) {
                 case 1: {
                     System.out.println("--- Creando Persona con Constructor por Defecto ---");
                     Persona persona = new Persona();
-                    
+
                     System.out.print("Ingrese el DNI: ");
                     persona.setDni(sc.nextInt());
-                    sc.nextLine(); 
-                    
+                    sc.nextLine();
+
                     System.out.print("Ingrese el nombre: ");
                     persona.setNombre(sc.nextLine());
-                    
+
                     System.out.print("Ingrese el domicilio: ");
                     persona.setDomicilio(sc.nextLine());
-                    
+
                     System.out.print("Ingrese la provincia: ");
                     persona.setProvincia(sc.nextLine());
-                    
+
                     System.out.print("Ingrese la fecha de nacimiento [AAAA-MM-DD]: ");
                     persona.setFechaNacimiento(LocalDate.parse(sc.nextLine()));
-                    
+
                     listaPersonas.add(persona);
                     System.out.println("Persona agregada con éxito.\n");
                     break;
@@ -53,19 +53,19 @@ public class Ejercicio1 {
                     System.out.print("Ingrese el DNI: ");
                     int dni = sc.nextInt();
                     sc.nextLine();
-                    
+
                     System.out.print("Ingrese el nombre: ");
                     String nombre = sc.nextLine();
-                    
+
                     System.out.print("Ingrese la fecha de nacimiento [AAAA-MM-DD]: ");
                     LocalDate fechaNacimiento = LocalDate.parse(sc.nextLine());
-                    
+
                     System.out.print("Ingrese el domicilio: ");
                     String domicilio = sc.nextLine();
-                    
+
                     System.out.print("Ingrese la provincia: ");
                     String provincia = sc.nextLine();
-                    
+
                     Persona persona = new Persona(dni, nombre, fechaNacimiento, domicilio, provincia);
                     listaPersonas.add(persona);
                     System.out.println("Persona agregada con éxito.\n");
@@ -76,13 +76,13 @@ public class Ejercicio1 {
                     System.out.print("Ingrese el DNI: ");
                     int dni = sc.nextInt();
                     sc.nextLine();
-                    
+
                     System.out.print("Ingrese el nombre: ");
                     String nombre = sc.nextLine();
-                    
+
                     System.out.print("Ingrese la fecha de nacimiento [AAAA-MM-DD]: ");
                     LocalDate fechaNacimiento = LocalDate.parse(sc.nextLine());
-                    
+
                     Persona persona = new Persona(dni, nombre, fechaNacimiento);
                     listaPersonas.add(persona);
                     System.out.println("Persona agregada con éxito. Provincia se asignó a 'Jujuy' por defecto.\n");
@@ -105,7 +105,7 @@ public class Ejercicio1 {
                     break;
                 }
                 default: {
-                    System.out.println("incorrectao .Por favor, ingresate una opción válida.");
+                    System.out.println("incorrecto .Por favor, ingresate una opción válida.");
                 }
             }
         } while (opc != 5);
