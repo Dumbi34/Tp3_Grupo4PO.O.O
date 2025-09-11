@@ -18,8 +18,7 @@ public class Ejercicio5 {
             System.out.println("5 - Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
-
+            scanner.nextLine();
             switch (opcion) {
                 case 1:
                     if (contador < productos.length) {
@@ -30,7 +29,7 @@ public class Ejercicio5 {
                         p.setDescripcion(scanner.nextLine());
                         System.out.print("Ingrese precio: ");
                         p.setPrecio(scanner.nextDouble());
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine();
                         productos[contador++] = p;
                         System.out.println("Producto creado exitosamente.");
                     } else {
@@ -55,7 +54,7 @@ public class Ejercicio5 {
                         if (p != null && p.getCodigo().equals(codigoMod)) {
                             System.out.print("Ingrese nuevo precio: ");
                             p.setPrecio(scanner.nextDouble());
-                            scanner.nextLine(); // Limpiar buffer
+                            scanner.nextLine();
                             System.out.println("Precio actualizado.");
                             encontrado = true;
                             break;
@@ -69,7 +68,7 @@ public class Ejercicio5 {
                 case 4:
                     System.out.print("Ingrese precio mínimo: ");
                     double precioMin = scanner.nextDouble();
-                    scanner.nextLine(); // Limpiar buffer
+                    scanner.nextLine();
                     System.out.println("\n--- PRODUCTOS CON PRECIO MAYOR A $" + precioMin + " ---");
                     for (Producto p : productos) {
                         if (p != null && p.getPrecio() > precioMin) {
